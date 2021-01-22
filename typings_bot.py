@@ -1,3 +1,18 @@
+'''
+
+Created by Daniel Susman (dansusman)
+Date: 01/21/2021
+
+This module contains a bot that automates the solving of a typing test on
+https://www.typings.gg. It is strictly for demonstration purposes and is not to be used
+for an illegal or unethical activity.
+
+Uses the well-known BeautifulSoup and Selenium libraries to web-scrape for
+the words to replicate and input into the "input bar" on the website. Program will 
+ask for the user to input a desired delay between key strokes, which will directly affect the 
+bot's typing speed. Delay and WPM are inversely correlated.
+
+'''
 import os
 import time
 from bs4 import BeautifulSoup
@@ -35,10 +50,10 @@ for run_count in range(2):
 
     # make all text into a string that can be inputted
     ''.join(text)
-    
+
     if run_count > 0:
         input("Press enter to start bot...")
-        
+
     first_elem = driver.find_element_by_id("input-field")
     first_elem.click()
 
