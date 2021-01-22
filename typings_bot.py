@@ -51,14 +51,9 @@ for run_count in range(2):
     # make all text into a string that can be inputted
     ''.join(text)
 
-    if run_count > 0:
-        input("Press enter to start bot...")
-
     first_elem = driver.find_element_by_id("input-field")
     first_elem.click()
 
-    # for i in range(len(text)):
-    #     time.sleep(delay)
     if text[0] == 'undefined ':
         continue
     for i in range(len(text)):
